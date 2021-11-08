@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainFormPage(title: 'RSA Playground'),
+      home: MainFormPage(title: 'RSA Encryption Playground'),
       debugShowCheckedModeBanner: false,
     );
   }
