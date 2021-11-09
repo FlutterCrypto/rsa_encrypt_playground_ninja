@@ -251,12 +251,12 @@ class _MyFormPageState extends State<Rsa2048OaepSha1EncryptionRoute> {
                           // Wenn alle Validatoren der Felder des Formulars gültig sind.
                           if (_formKey.currentState!.validate()) {
                             String plaintext = plaintextController.text;
-                            String publicKemPem = publicKeyController.text;
+                            String publicKeyPem = publicKeyController.text;
 
                             String ciphertextBase64 = '';
                             try {
                               final publicKey =
-                                  RSAPublicKey.fromPEM(publicKemPem);
+                                  RSAPublicKey.fromPEM(publicKeyPem);
                               ciphertextBase64 =
                                   publicKey.encryptOaepToBase64(plaintext);
                             } catch (error) {
